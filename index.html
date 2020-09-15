@@ -41,7 +41,7 @@ h1 {
     background: #36393B;
     color: white;
     display: inline-block;
-    box-shadow: 2px 2px 1px 0px white;
+    /*box-shadow: 2px 2px 1px 0px white;*/
 }
 
 .card:hover {
@@ -53,7 +53,7 @@ h1 {
     display: inline-block;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 2em;
     /* padding-left: 20px; */
 }
 
@@ -73,14 +73,14 @@ h1 {
     /* padding-right: 30px; */
     /* border-right: 2px solid #295C7B; */
     font-family: 'Raleway', sans-serif;
-    font-size: 1.2em;
+    font-size: 2em;
 }
-.greet{
+.greet, .icon{
     
     min-width: 162px;
     /* padding-right: 30px; */
     font-family: 'Raleway', sans-serif;
-    font-size: 1.2em;
+    font-size: 2em;
 }
 
     </style>
@@ -93,6 +93,7 @@ h1 {
     
     <div class="card">
         <div class="greet" id="greet"></div>
+        <div class="img" id="img"></div>
       <div class="date" id="date"></div>
       <div class="clock">
         <div class="time" id="hour"></div>
@@ -122,10 +123,19 @@ var seconds = zeros(today.getSeconds());
 hrs = today.getHours();
 if (hrs < 12)
         greet = 'Good Morning Kerry';
-    else if (hrs >= 12 && hrs <= 17)
+        // img = new Image();
+        // img.src = 'coffee-breaks.png';
+   else if (hrs >= 12 && hrs <= 17)
         greet = 'Good Afternoon Kerry';
+        // img = new Image();
+        // img.src = 'food-and-restaurant.png';
     else if (hrs >= 17 && hrs <= 24)
         greet = 'Good Evening Kerry';
+        // img = new Image();        
+        // img.src = 'beer.png';
+
+
+
 // console.log(today.toLocaleTimeString());
 document.getElementById('greet').innerHTML = greet;
 document.getElementById('hour').innerHTML = hour;
@@ -152,5 +162,8 @@ dateTime()
 // END
 </script>
 
+<!-- Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
 </body>
 </html>
